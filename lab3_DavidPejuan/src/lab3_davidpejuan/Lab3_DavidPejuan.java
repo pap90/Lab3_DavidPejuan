@@ -107,7 +107,6 @@ public class Lab3_DavidPejuan {
                                 }
                             }
                             P.add(new Berzerk(0, edad, nombre, estatura, peso, cpelo, raza, 0, 0, 0, 0, 0, ""));
-                            System.out.println(P);
                             /*P.get(0).setHP(180);
                             P.get(0).setAD(80);
                             P.get(0).setEficacia(80);
@@ -236,7 +235,7 @@ public class Lab3_DavidPejuan {
                                     default:
                                 }
                             }
-                            
+                            P.add(new mago(0, 0, edad, nombre, estatura, peso, cpelo, raza,0 , 0, 0, 0, 0, ""));
                             break;
                         default:
 
