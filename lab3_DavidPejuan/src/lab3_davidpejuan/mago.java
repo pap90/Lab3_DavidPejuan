@@ -11,24 +11,15 @@ import java.util.ArrayList;
  *
  * @author pejua
  */
-public class Berzerk extends aliados{
+public class mago extends aliados{
     private ArrayList <objetos> mochila=new ArrayList();
 
-    public Berzerk() {
+    public mago() {
     }
 
-    public Berzerk(int suerte, int Edad, String nombre, int estatura, int peso, String cpelo, String raza, int HP, int AD, int Eficacia, int Velocidad, int Crit, String grito) {
+    public mago(int suerte, int Edad, String nombre, int estatura, int peso, String cpelo, String raza, int HP, int AD, int Eficacia, int Velocidad, int Crit, String grito) {
         super(suerte, Edad, nombre, estatura, peso, cpelo, raza, HP, AD, Eficacia, Velocidad, Crit, grito);
-        super.setHP(180);
-        super.setAD(80);
-        super.setEficacia(80);
-        super.setCrit(30);
-        super.setSuerte(15);
-        super.setVelocidad(20);
-        super.setGrito("KALIMBALIIIIIIII!!!");
-        
     }
-    
 
     public ArrayList<objetos> getMochila() {
         return mochila;
@@ -40,8 +31,7 @@ public class Berzerk extends aliados{
 
     @Override
     public String toString() {
-        return "Berzerk{" + "mochila=" + mochila + '}'+super.toString();
+        return "mago{" + "mochila=" + mochila + '}'+super.toString();
     }
-    
     
 }

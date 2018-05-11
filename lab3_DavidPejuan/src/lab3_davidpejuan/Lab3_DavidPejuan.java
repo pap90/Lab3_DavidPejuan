@@ -22,7 +22,16 @@ public class Lab3_DavidPejuan {
      */
     public static void main(String[] args) {
         ArrayList<Personajes> P = new ArrayList();
+        int edad;
+        String nombre = "";
+        int estatura;
+        int peso;
+        String cpelo;
+        String cpiel;
+        String raza = "";
+        int ropc = 0;
         int opcion = 0;
+        int copc;
         while (opcion != 3) {
             System.out.println("1) Iniciar");
             System.out.println("2) Nivel de dificultad");
@@ -40,40 +49,64 @@ public class Lab3_DavidPejuan {
                     switch (opc) {
                         case 1:
                             System.out.println("Ingrese la edad: ");
-                            int edad = sc.nextInt();
+                            edad = sc.nextInt();
                             System.out.println("Ingrese el nombre: ");
-                            String nombre = sc.next();
+                            nombre = sc.next();
                             System.out.println("Ingrese la estatura: ");
-                            int estatura = sc.nextInt();
+                            estatura = sc.nextInt();
                             System.out.println("Ingrese el peso: ");
-                            int peso = sc.nextInt();
+                            peso = sc.nextInt();
                             System.out.println("Ingrese color de piel: ");
-                            String cpiel = sc.next();
-                            int copc = 0;
-                            String cpelo;
-                            while (copc != 1 || copc != 2 || copc != 3) {
+                            cpiel = sc.next();
+                            copc = 0;
+                            cpelo = "";
+                            while (copc != 1 && copc != 2 && copc != 3) {
                                 System.out.println("desea que el color de pelo sea: ");
                                 System.out.println("1) negro");
                                 System.out.println("2) cafe");
                                 System.out.println("3)rubio");
                                 System.out.println("Ingrese su opcion");
-                                copc=sc.nextInt();
+                                copc = sc.nextInt();
                                 switch (copc) {
                                     case 1:
-                                        cpelo="Negro";
+                                        cpelo = "Negro";
                                         break;
                                     case 2:
-                                        cpelo="cafe";
+                                        cpelo = "cafe";
                                         break;
                                     case 3:
-                                        cpelo="rubio";
+                                        cpelo = "rubio";
                                         break;
                                     default:
                                 }
                             }
-                            /*Nombre , Estatura , Peso , Color de piel  
-                            ,Color de pelo (Que solo pueden ser tres Negro , Café y rubio )  , raza ( que pueden ser Hobbit , elfos , humanos y enanos) */
-                            P.add(new Berzerk());
+                            raza = "";
+                            ropc = 0;
+                            while (ropc != 1 && ropc != 2 && ropc != 3 && ropc != 4) {
+                                System.out.println("Desea que su raza sea: ");
+                                System.out.println("1) Hobbit");
+                                System.out.println("2) elfo");
+                                System.out.println("3) humano");
+                                System.out.println("4) enano");
+                                System.out.println("Ingrese su opcion: ");
+                                ropc = sc.nextInt();
+                                switch (ropc) {
+                                    case 1:
+                                        raza = "Hobbit";
+                                        break;
+                                    case 2:
+                                        raza = "elfo";
+                                        break;
+                                    case 3:
+                                        raza = "Humano";
+                                        break;
+                                    case 4:
+                                        raza = "enano";
+                                        break;
+                                    default:
+                                }
+                            }
+                            P.add(new Berzerk(0, edad, nombre, estatura, peso, cpelo, raza, 0, 0, 0, 0, 0, ""));
                             System.out.println(P);
                             /*P.get(0).setHP(180);
                             P.get(0).setAD(80);
@@ -82,8 +115,128 @@ public class Lab3_DavidPejuan {
                             P.get(0).se*/
 
                             break;
+                        case 2:
+                            System.out.println("Ingrese la edad: ");
+                            edad = sc.nextInt();
+                            System.out.println("Ingrese el nombre: ");
+                            nombre = sc.next();
+                            System.out.println("Ingrese la estatura: ");
+                            estatura = sc.nextInt();
+                            System.out.println("Ingrese el peso: ");
+                            peso = sc.nextInt();
+                            System.out.println("Ingrese color de piel: ");
+                            cpiel = sc.next();
+                            copc = 0;
+                            cpelo = "";
+                            while (copc != 1 && copc != 2 && copc != 3) {
+                                System.out.println("desea que el color de pelo sea: ");
+                                System.out.println("1) negro");
+                                System.out.println("2) cafe");
+                                System.out.println("3)rubio");
+                                System.out.println("Ingrese su opcion");
+                                copc = sc.nextInt();
+                                switch (copc) {
+                                    case 1:
+                                        cpelo = "Negro";
+                                        break;
+                                    case 2:
+                                        cpelo = "cafe";
+                                        break;
+                                    case 3:
+                                        cpelo = "rubio";
+                                        break;
+                                    default:
+                                }
+                            }
+                            raza = "";
+                            ropc = 0;
+                            while (ropc != 1 && ropc != 2 && ropc != 3 && ropc != 4) {
+                                System.out.println("Desea que su raza sea: ");
+                                System.out.println("1) Hobbit");
+                                System.out.println("2) elfo");
+                                System.out.println("3) humano");
+                                System.out.println("4) enano");
+                                System.out.println("Ingrese su opcion: ");
+                                ropc = sc.nextInt();
+                                switch (ropc) {
+                                    case 1:
+                                        raza = "Hobbit";
+                                        break;
+                                    case 2:
+                                        raza = "elfo";
+                                        break;
+                                    case 3:
+                                        raza = "Humano";
+                                        break;
+                                    case 4:
+                                        raza = "enano";
+                                        break;
+                                    default:
+                                }
+                            }
+                            P.add(new Arquero(0, edad, nombre, estatura, peso, cpelo, raza, 0, 0, 0, 0, 0, ""));
+                            break;
+
                         case 3:
-                            opcion = opc;
+                            System.out.println("Ingrese la edad: ");
+                            edad = sc.nextInt();
+                            System.out.println("Ingrese el nombre: ");
+                            nombre = sc.next();
+                            System.out.println("Ingrese la estatura: ");
+                            estatura = sc.nextInt();
+                            System.out.println("Ingrese el peso: ");
+                            peso = sc.nextInt();
+                            System.out.println("Ingrese color de piel: ");
+                            cpiel = sc.next();
+                            copc = 0;
+                            cpelo = "";
+                            while (copc != 1 && copc != 2 && copc != 3) {
+                                System.out.println("desea que el color de pelo sea: ");
+                                System.out.println("1) negro");
+                                System.out.println("2) cafe");
+                                System.out.println("3)rubio");
+                                System.out.println("Ingrese su opcion");
+                                copc = sc.nextInt();
+                                switch (copc) {
+                                    case 1:
+                                        cpelo = "Negro";
+                                        break;
+                                    case 2:
+                                        cpelo = "cafe";
+                                        break;
+                                    case 3:
+                                        cpelo = "rubio";
+                                        break;
+                                    default:
+                                }
+                            }
+                            raza = "";
+                            ropc = 0;
+                            while (ropc != 1 && ropc != 2 && ropc != 3 && ropc != 4) {
+                                System.out.println("Desea que su raza sea: ");
+                                System.out.println("1) Hobbit");
+                                System.out.println("2) elfo");
+                                System.out.println("3) humano");
+                                System.out.println("4) enano");
+                                System.out.println("Ingrese su opcion: ");
+                                ropc = sc.nextInt();
+                                switch (ropc) {
+                                    case 1:
+                                        raza = "Hobbit";
+                                        break;
+                                    case 2:
+                                        raza = "elfo";
+                                        break;
+                                    case 3:
+                                        raza = "Humano";
+                                        break;
+                                    case 4:
+                                        raza = "enano";
+                                        break;
+                                    default:
+                                }
+                            }
+                            
                             break;
                         default:
 
