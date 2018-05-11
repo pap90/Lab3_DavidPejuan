@@ -87,5 +87,10 @@ public class aliados extends Personajes{
     public void setRaza(String raza) {
         this.raza = raza;
     }
+
+    @Override
+    public String toString() {
+        return "aliados{" + "suerte=" + suerte + ", Edad=" + Edad + ", nombre=" + nombre + ", estatura=" + estatura + ", peso=" + peso + ", cpelo=" + cpelo + ", raza=" + raza + '}'+ super.toString();
+    }
     
 }

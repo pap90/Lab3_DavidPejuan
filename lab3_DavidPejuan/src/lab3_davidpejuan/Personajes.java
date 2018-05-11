@@ -10,7 +10,7 @@ package lab3_davidpejuan;
  * @author pejua
  */
 public class Personajes {
-    private  int HP;
+    private int HP;
     private int AD;
     private int Eficacia;
     private int Velocidad;
@@ -75,6 +75,11 @@ public class Personajes {
 
     public void setGrito(String grito) {
         this.grito = grito;
+    }
+
+    @Override
+    public String toString() {
+        return "Personajes{" + "HP=" + HP + ", AD=" + AD + ", Eficacia=" + Eficacia + ", Velocidad=" + Velocidad + ", Crit=" + Crit + ", grito=" + grito + '}';
     }
     
 }
