@@ -17,7 +17,7 @@ public class aliados extends Personajes{
     private int peso;
     private String cpelo;
     private String raza;
-
+    
     public aliados() {
     }
 
