@@ -14,7 +14,7 @@ import java.util.Set;
  * @author pejua
  */
 public class Lab3_DavidPejuan {
-
+    
     public static Scanner sc = new Scanner(System.in);
     public static ArrayList<objetos> obj=new ArrayList();
     /**
@@ -22,7 +22,7 @@ public class Lab3_DavidPejuan {
      */
     public static void main(String[] args) {
         ArrayList<Personajes> P = new ArrayList();
-        
+        int contpasos=0;
         int edad;
         String nombre = "";
         int estatura;
